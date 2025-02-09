@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+
+        mathOperation addition12 = (x,y) -> x+y;
+        int sum = executeOperation(10,5, addition12);
+        System.out.println("sum is " + sum);
+
+        mathOperation substraction12 = (x,y) -> x-y;
+        int result = executeOperation(25,15,substraction12);
+        System.out.println("result is: " + result);
+
+    }
+
+    public static int executeOperation(int a, int b, mathOperation Operation389){
+
+        return Operation389.operate(a,b);
+
+    }
+}
